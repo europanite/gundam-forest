@@ -101,32 +101,3 @@ outputs/predictions_holdout.csv
 ```
 
 These outputs are generated with the weak `Unknown -> 0` assumption.
-
-## Recommended next steps
-
-1. Add a manually verified `0` class for characters confirmed not to die in war.
-2. Split uncertain labels into a separate review set instead of training on them.
-3. Add stronger character-level features, such as:
-   - protagonist / antagonist / mentor / commander role
-   - mobile suit pilot status
-   - final-episode appearance
-   - narrative death flags
-   - voice actor production constraints, if externally verifiable
-4. Compare Random Forest with Logistic Regression and Gradient Boosting.
-5. Add source URLs for every row used as a training label.
-
-## GitHub setup
-
-```bash
-git init
-git add .
-git commit -m "Initial Gundam Random Forest death prediction project"
-git branch -M main
-git remote add origin git@github.com:YOUR_NAME/gundam-rf-death-predictor.git
-git push -u origin main
-```
-
-## License
-
-Add a license before publishing if needed.  
-The dataset may contain franchise-derived character metadata, so check whether your intended distribution is acceptable before making it public.
